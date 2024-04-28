@@ -36,6 +36,7 @@ def cleanup_dr(dr_endpoint, dr_token):
             resp = client.get(initial_url, params={"offset": offset}).json()
 
     def _get_assets(asset_url, id_attribute, paginated=True, params=None):
+    def _get_assets(asset_url, id_attribute, paginated=True, params=None):
         """Retrieve DR assets at a url."""
         client = dr.Client(endpoint=dr_endpoint, token=dr_token)  # type: ignore
         result = set()
